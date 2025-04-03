@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80333985248ac5746994226eb4b3f342, type: 3}
+  m_Name: Oleada 2
+  m_EditorClassIdentifier: 
+  bloques:
+  - tipoEnemigos: {fileID: 45020510858175827, guid: d56c776fd603b6143bff7b67b8fbb81e, type: 3}
+    cantidad: 3
+    enemigosPorSegundo: 1
