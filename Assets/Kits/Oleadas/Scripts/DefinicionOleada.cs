@@ -7,9 +7,9 @@ public class DefinicionOleada : ScriptableObject
     [System.Serializable]
     public class BloqueEnemigo
     {
-        [SerializeField] public GameObject tipoEnemigos;
-        [SerializeField] public int cantidad;
-        [SerializeField] public float enemigosPorSegundo;
+        public Enemigo tipoEnemigos;
+        public int cantidad;
+        public float tiempoEntreEnemigos;
     }
 
     public BloqueEnemigo[] bloques;

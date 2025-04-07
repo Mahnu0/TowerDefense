@@ -1,41 +1,61 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class GestorOleadas : MonoBehaviour
 {
     [System.Serializable]
     public class LineaGuion
     {
-        [SerializeField] public float espera;
-        [SerializeField] public DefinicionOleada oleada;
+        public float espera;
+        public DefinicionOleada oleada;
     }
 
     [System.Serializable]
     public class GuionOleadas
     {
-        [SerializeField] public LineaGuion[] lineas;
+        public LineaGuion[] lineas;
     }
 
-    public GuionOleadas guion;
+    [SerializeField] GuionOleadas guion;
+    [SerializeField] SplineContainer[] rutas;
 
+    float contador = 0f;
+    bool enemigoCreado = false;
 
     private void Start()
     {
-        //LeeGuion(lineas);
+        StartCoroutine(LeeGuion());
     }
 
-    IEnumerator LeeGuion(LineaGuion[] lineas)
+    IEnumerator LeeGuion()
     {
-        foreach (LineaGuion linea in lineas)
+        // Pasa por todas las LINEAS de GUION
+        for (int i = 0; i < guion.lineas.Length; i++)
         {
-
+            StartCoroutine(LanzaOleadas(guion.lineas[i].oleada));
+            yield return new WaitForSeconds(guion.lineas[i].espera);
         }
-        yield return new WaitForSeconds(5);
     }
 
-    IEnumerator LanzaOleadas()
+    IEnumerator LanzaOleadas(DefinicionOleada oleada)
     {
-        yield return new WaitForSeconds(5);
+        // Pasa por todos los BLOQUES de la OLEADA
+        for (int i = 0; i < oleada.bloques.Length; i++)
+        {
+            // Instancia la CANTIDAD de ENEMIGOS del BLOQUE con su RUTA
+            for (int j = 0; j < oleada.bloques[i].cantidad; j++)
+            {
+                Enemigo enemigo = Instantiate(
+                oleada.bloques[i].tipoEnemigos,
+                Vector3.zero,
+                Quaternion.identity);
+
+                enemigo.EstablecerRuta(rutas[Random.Range(0, rutas.Length)]);
+
+                yield return new WaitForSeconds(oleada.bloques[i].tiempoEntreEnemigos);
+            }
+        }
+        
     }
 }

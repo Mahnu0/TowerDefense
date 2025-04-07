@@ -4,7 +4,7 @@ using UnityEngine.Splines;
 
 public class Enemigo : MonoBehaviour
 {
-    [SerializeField] public SplineContainer ruta;
+    public SplineContainer ruta;
     [SerializeField] private float velocidad = 4f;
     [SerializeField] private float vida = 2f;
 
@@ -15,6 +15,11 @@ public class Enemigo : MonoBehaviour
     Vector3[] pathPointsCache;
     Vector3 posicionSiguiente;
     int indiceSiguientePosicion = 1;
+
+    public void EstablecerRuta(SplineContainer r)
+    {
+        ruta = r;
+    }
 
     private void Start()
     {

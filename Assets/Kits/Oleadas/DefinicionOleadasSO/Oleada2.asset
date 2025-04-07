@@ -10,9 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80333985248ac5746994226eb4b3f342, type: 3}
-  m_Name: Oleada 1
+  m_Name: Oleada2
   m_EditorClassIdentifier: 
   bloques:
-  - tipoEnemigos: {fileID: 2648600978400926413, guid: 913eee27b5ca39a429b24a2a65ebfdb1, type: 3}
+  - tipoEnemigos: {fileID: 5728289550254593106, guid: d56c776fd603b6143bff7b67b8fbb81e, type: 3}
+    cantidad: 3
+    tiempoEntreEnemigos: 1
+  - tipoEnemigos: {fileID: 187358809606329700, guid: 7e5848c6ef711ed42bc56fb5dceaf3c5, type: 3}
     cantidad: 5
-    enemigosPorSegundo: 3
+    tiempoEntreEnemigos: 1
