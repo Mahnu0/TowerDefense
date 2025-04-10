@@ -857,8 +857,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: TowerDefense_ManuelLeones
-  metroPackageVersion: 
+  metroPackageName: TowerDefenseManuelLeones
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -866,7 +866,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: TowerDefense_ManuelLeones
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: TowerDefense_ManuelLeones
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -934,7 +934,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 2
+  activeInputHandler: 1
   windowsGamepadBackendHint: 0
   cloudProjectId: da21f9fc-b192-4a15-9ba1-c8bccb7e3cf5
   framebufferDepthMemorylessMode: 0

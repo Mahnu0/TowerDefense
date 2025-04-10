@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.Splines;
 
-public class Enemigo : MonoBehaviour
+public class Enemigo : MonoBehaviour, IGolpeable
 {
     public SplineContainer ruta;
     [SerializeField] private float velocidad = 4f;
-    [SerializeField] private float vida = 2f;
+    [SerializeField] private float vida, vidaMaxima = 2f;
+    [SerializeField] private HealthBar healthBar;
 
     [SerializeField] private float umbralLlegada = 1f;
 
@@ -34,6 +35,8 @@ public class Enemigo : MonoBehaviour
 
         transform.position = pathPointsCache[0];
         posicionSiguiente = pathPointsCache[indiceSiguientePosicion];
+
+        healthBar = GetComponentInChildren<HealthBar>();
     }
 
     private void Update()
@@ -51,5 +54,10 @@ public class Enemigo : MonoBehaviour
             else
                 posicionSiguiente = pathPointsCache[indiceSiguientePosicion];
         }
+    }
+
+    public void RecibeDanyo(float cantidad)
+    {
+        vida -= cantidad;
     }
 }
