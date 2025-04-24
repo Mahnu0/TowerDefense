@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Proyectil : MonoBehaviour
+public class Proyectil : MonoBehaviour, IGolpeable
 {
     [Header("TIPO DE DAÑO")]
     [SerializeField] private float danyoImpactoDirecto = 1f;
@@ -59,5 +59,10 @@ public class Proyectil : MonoBehaviour
             }
         }
         Destroy(this.gameObject);
+    }
+
+    public void RecibeDanyo(float cantidad)
+    {
+        throw new System.NotImplementedException();
     }
 }
