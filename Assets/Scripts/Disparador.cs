@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class Disparador : MonoBehaviour
@@ -38,21 +39,24 @@ public class Disparador : MonoBehaviour
 
         foreach (Collider c in objetivosCercanos)
         {
-            Transform posibleObjetivo = c.GetComponent<Transform>();
-
-            float distanciaNueva;
-            float distancia;
-
-            if (objetivo)
+            if (tagsObjetivos.Contains(c.tag))
             {
-                distanciaNueva = Vector3.Distance(transform.position, posibleObjetivo.position);
-                distancia = Vector3.Distance(transform.position, objetivo.position);
+                Transform posibleObjetivo = c.GetComponent<Transform>();
 
-                if (distanciaNueva < distancia)
+                float distanciaNueva;
+                float distancia;
+
+                if (objetivo)
+                {
+                    distanciaNueva = Vector3.Distance(transform.position, posibleObjetivo.position);
+                    distancia = Vector3.Distance(transform.position, objetivo.position);
+
+                    if (distanciaNueva < distancia)
+                        objetivo = posibleObjetivo;
+                }
+                else
                     objetivo = posibleObjetivo;
             }
-            else
-                objetivo = posibleObjetivo;
         }
     }
 
