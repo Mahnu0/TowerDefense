@@ -6,7 +6,7 @@ public class Enemigo : MonoBehaviour, IGolpeable
     public SplineContainer ruta;
     [SerializeField] private float velocidad = 4f;
     [SerializeField] private float vida, vidaMaxima = 2f;
-    [SerializeField] private HealthBar healthBar;
+    public HealthBar healthBar;
 
     [SerializeField] private float umbralLlegada = 1f;
 
@@ -36,7 +36,11 @@ public class Enemigo : MonoBehaviour, IGolpeable
         transform.position = pathPointsCache[0];
         posicionSiguiente = pathPointsCache[indiceSiguientePosicion];
 
+        vida = vidaMaxima;
+
         healthBar = GetComponentInChildren<HealthBar>();
+        Debug.Log("V" + vida + " VM" + vidaMaxima);
+        healthBar.UpdateHealthBar(vida, vidaMaxima);
     }
 
     private void Update()
@@ -59,5 +63,12 @@ public class Enemigo : MonoBehaviour, IGolpeable
     public void RecibeDanyo(float cantidad)
     {
         vida -= cantidad;
+
+        if (vida > 0)
+            healthBar.UpdateHealthBar(vida, vidaMaxima);
+        else
+            Destroy(this.gameObject);
+
+        Debug.Log("Auch");
     }
 }

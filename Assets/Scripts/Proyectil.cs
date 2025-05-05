@@ -3,9 +3,11 @@ using DG.Tweening;
 
 public partial class Proyectil : MonoBehaviour
 {
-    [SerializeField] private float tiempoMovimiento = 1f;
 
+    [Header("GENERAL")]
+    [SerializeField] private float tiempoMovimiento = 1f;
     //[SerializeField] private float velocidad = 1f;
+    [SerializeField] private string[] tagsAfectados;
 
     [Header("TIPO DE DAÑO")]
     [SerializeField] private float danyoImpactoDirecto = 1f;
@@ -14,12 +16,11 @@ public partial class Proyectil : MonoBehaviour
     [SerializeField] private float danyoAreaEnBorde = 0.5f;
 
     [Header("SUBPROYECTILES")]
+    [SerializeField] private GameObject prefabSubProyectil;
     [SerializeField] private int subProyectilesAGenerar = 3;
     [SerializeField] private float radioSubProyectiles = 4f;
     [SerializeField] private float alturaSaltoSubProyectil = 5f;
-    [SerializeField] private GameObject prefabSubProyectil;
 
-    [SerializeField] private string[] tagsAfectados;
 
     public void Inicializar(Vector3 puntoInicial, Vector3 puntoFinal, float alturaSalto)
     {
@@ -36,20 +37,27 @@ public partial class Proyectil : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Choca");
+
         if (ColliderEsAfectable(other))
         {
+            Debug.Log("Es afectable");
             other.GetComponent<IGolpeable>()?.RecibeDanyo(danyoImpactoDirecto);
             RealizaLaDestruccion();
         }
+        else
+            RealizaLaDestruccion();
     }
 
     void RealizaLaDestruccion()
     {
+        //DanyarPorDestruccion();
+
         Destroy(gameObject);
 
-        DanyarPorDestruccion();
-
         GeneraSubProyectiles();
+
+        Destroy(this.gameObject);
     }
 
     private void GeneraSubProyectiles()
@@ -93,6 +101,8 @@ public partial class Proyectil : MonoBehaviour
         {
             if (other.CompareTag(t))
                 esAfectable = true;
+            else
+                esAfectable = false;
         }
 
         return esAfectable;
