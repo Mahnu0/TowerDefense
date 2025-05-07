@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 800138706250938880, guid: edd59ff345bbd6647ab2a1f01ada5f7e, type: 3}
       propertyPath: radioDanyoArea
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 800138706250938880, guid: edd59ff345bbd6647ab2a1f01ada5f7e, type: 3}
       propertyPath: danyoAreaEnBorde

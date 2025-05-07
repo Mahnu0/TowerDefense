@@ -8,21 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 336948459030898532, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
+      propertyPath: alturaSaltoSubProyectil
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3309654707403770259, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
       propertyPath: m_Name
       value: Flecha_Subproyectil Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7270592933699412749, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 60.35
+      value: 56.40701
       objectReference: {fileID: 0}
     - target: {fileID: 7270592933699412749, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.41
+      value: 2.855156
       objectReference: {fileID: 0}
     - target: {fileID: 7270592933699412749, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 38.52
+      value: 36.606174
       objectReference: {fileID: 0}
     - target: {fileID: 7270592933699412749, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
       propertyPath: m_LocalRotation.w

@@ -19,7 +19,7 @@ public partial class Proyectil : MonoBehaviour
     [SerializeField] private GameObject prefabSubProyectil;
     [SerializeField] private int subProyectilesAGenerar = 3;
     [SerializeField] private float radioSubProyectiles = 4f;
-    [SerializeField] private float alturaSaltoSubProyectil = 5f;
+    [SerializeField] private float alturaSaltoSubProyectil = 10f;
 
 
     public void Inicializar(Vector3 puntoInicial, Vector3 puntoFinal, float alturaSalto)
@@ -51,10 +51,8 @@ public partial class Proyectil : MonoBehaviour
 
     void RealizaLaDestruccion()
     {
-        //DanyarPorDestruccion();
-
-        Destroy(gameObject);
-
+        DanyarPorDestruccion();
+        
         GeneraSubProyectiles();
 
         Destroy(this.gameObject);
@@ -70,9 +68,11 @@ public partial class Proyectil : MonoBehaviour
             posicionAleatoria *= radioSubProyectiles;
             posicionAleatoria += transform.position;
 
+            Vector3 spawnPoint = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
+
             GameObject newProyectil = Instantiate(prefabSubProyectil);
             prefabSubProyectil.GetComponent<Proyectil>().Inicializar(
-                transform.position, posicionAleatoria, alturaSaltoSubProyectil);
+                spawnPoint, posicionAleatoria, alturaSaltoSubProyectil);
         }
     }
 
