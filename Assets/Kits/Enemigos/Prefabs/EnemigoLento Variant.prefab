@@ -20,6 +20,22 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2d8cead5abbca0649ae648ccfd606755, type: 2}
+    - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+      propertyPath: radioDeteccion
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+      propertyPath: alturaSaltoProyectil
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+      propertyPath: radioPerdidaDeObjetivo
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+      propertyPath: tiempoEntreProyectiles
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4696549151606951122, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
       propertyPath: m_Name
       value: EnemigoLento Variant

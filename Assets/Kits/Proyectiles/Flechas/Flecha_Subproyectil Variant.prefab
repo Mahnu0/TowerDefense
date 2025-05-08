@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 336948459030898532, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
       propertyPath: alturaSaltoSubProyectil
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3309654707403770259, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
       propertyPath: m_Name
@@ -18,15 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7270592933699412749, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.40701
+      value: 56.4115
       objectReference: {fileID: 0}
     - target: {fileID: 7270592933699412749, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.855156
+      value: 0.17852211
       objectReference: {fileID: 0}
     - target: {fileID: 7270592933699412749, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.606174
+      value: 41.300797
       objectReference: {fileID: 0}
     - target: {fileID: 7270592933699412749, guid: 1a0d6fe57c5189647a6ff9966082ab2e, type: 3}
       propertyPath: m_LocalRotation.w

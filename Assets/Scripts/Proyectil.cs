@@ -37,11 +37,8 @@ public partial class Proyectil : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Choca");
-
         if (ColliderEsAfectable(other))
         {
-            Debug.Log("Es afectable");
             other.GetComponent<IGolpeable>()?.RecibeDanyo(danyoImpactoDirecto);
             RealizaLaDestruccion();
         }
@@ -68,10 +65,10 @@ public partial class Proyectil : MonoBehaviour
             posicionAleatoria *= radioSubProyectiles;
             posicionAleatoria += transform.position;
 
-            Vector3 spawnPoint = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
+            Vector3 spawnPoint = new Vector3(posicionAleatoria.x, posicionAleatoria.y + 10, posicionAleatoria.z);
 
             GameObject newProyectil = Instantiate(prefabSubProyectil);
-            prefabSubProyectil.GetComponent<Proyectil>().Inicializar(
+            newProyectil.GetComponent<Proyectil>().Inicializar(
                 spawnPoint, posicionAleatoria, alturaSaltoSubProyectil);
         }
     }

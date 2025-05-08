@@ -39,7 +39,6 @@ public class Enemigo : MonoBehaviour, IGolpeable
         vida = vidaMaxima;
 
         healthBar = GetComponentInChildren<HealthBar>();
-        Debug.Log("V" + vida + " VM" + vidaMaxima);
         healthBar.UpdateHealthBar(vida, vidaMaxima);
     }
 
@@ -68,7 +67,5 @@ public class Enemigo : MonoBehaviour, IGolpeable
             healthBar.UpdateHealthBar(vida, vidaMaxima);
         else
             Destroy(this.gameObject);
-
-        Debug.Log("Auch");
     }
 }

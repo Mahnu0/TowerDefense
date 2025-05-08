@@ -12,6 +12,22 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5fc069270e39b494f8e164e8b9406249, type: 2}
+    - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+      propertyPath: prefabProyectil
+      value: 
+      objectReference: {fileID: 2648600978400926413}
+    - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+      propertyPath: alturaSaltoProyectil
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+      propertyPath: radioPerdidaDeObjetivo
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+      propertyPath: tiempoEntreProyectiles
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4696549151606951122, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
       propertyPath: m_Name
       value: EnemigoNormal Variant
@@ -61,3 +77,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+--- !u!1 &2648600978400926413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4696549151606951122, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+  m_PrefabInstance: {fileID: 7344462930909795871}
+  m_PrefabAsset: {fileID: 0}

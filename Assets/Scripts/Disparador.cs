@@ -81,6 +81,8 @@ public class Disparador : MonoBehaviour
 
     private void Dispara()
     {
+        Debug.Log("Shoot");
+
         GameObject go = Instantiate(prefabProyectil);
         Proyectil proyectil = go.GetComponent<Proyectil>();
 
