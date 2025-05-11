@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         if (cantidadEnemigos <= 0 && ultimoEnemigoCreado)
             StartCoroutine(FinalPartida(true));
 
-        textoResistencia.text = $"Vida: {resistencia}";
+        textoResistencia.text = $"Resistencia: {resistencia}";
     }
 
     public void NotificaEnemigoCreado() { cantidadEnemigos++; }
