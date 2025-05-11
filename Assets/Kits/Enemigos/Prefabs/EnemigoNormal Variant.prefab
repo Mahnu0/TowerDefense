@@ -8,14 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1066358622402837971, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+      propertyPath: velocidad
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1603811505085053057, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5fc069270e39b494f8e164e8b9406249, type: 2}
     - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+      propertyPath: radioDeteccion
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
       propertyPath: prefabProyectil
       value: 
-      objectReference: {fileID: 2648600978400926413}
+      objectReference: {fileID: 8214729411125943444, guid: 0ecfc6fcd85322a43a490aa8f72403a3, type: 3}
     - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
       propertyPath: alturaSaltoProyectil
       value: 0.5
@@ -77,8 +85,3 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
---- !u!1 &2648600978400926413 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4696549151606951122, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
-  m_PrefabInstance: {fileID: 7344462930909795871}
-  m_PrefabAsset: {fileID: 0}

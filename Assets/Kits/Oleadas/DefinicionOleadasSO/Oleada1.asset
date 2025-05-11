@@ -14,8 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloques:
   - tipoEnemigos: {fileID: 7719365040953486284, guid: 913eee27b5ca39a429b24a2a65ebfdb1, type: 3}
-    cantidad: 10
+    cantidad: 11
     tiempoEntreEnemigos: 0.5
-  - tipoEnemigos: {fileID: 5728289550254593106, guid: d56c776fd603b6143bff7b67b8fbb81e, type: 3}
-    cantidad: 10
-    tiempoEntreEnemigos: 2

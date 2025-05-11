@@ -9,9 +9,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 999633293740578974, guid: 397a55b7196bed040967606750252530, type: 3}
+      propertyPath: radioDeteccion
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 999633293740578974, guid: 397a55b7196bed040967606750252530, type: 3}
       propertyPath: prefabProyectil
       value: 
       objectReference: {fileID: 6519002336694350939, guid: c1a435ed69326aa4a8d68472c538818b, type: 3}
+    - target: {fileID: 999633293740578974, guid: 397a55b7196bed040967606750252530, type: 3}
+      propertyPath: radioPerdidaDeObjetivo
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5464270668919696353, guid: 397a55b7196bed040967606750252530, type: 3}
       propertyPath: m_Name
       value: TorreFlecha_Lv0 Variant

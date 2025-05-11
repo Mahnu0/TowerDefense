@@ -3,13 +3,12 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private Slider slider;
     [SerializeField] private Image sliderFill;
+    [SerializeField]private Slider slider;
     [SerializeField] private Transform target;
     [SerializeField] private Vector3 offset;
 
     Color orange;
-    Camera camera;
 
     public void UpdateHealthBar(float currentValue, float maxValue)
     {
@@ -22,15 +21,14 @@ public class HealthBar : MonoBehaviour
 
     private void Start()
     {
-        // Crear el color naranja para la barra de vida
-        // Color32(r, g, b, a) permite usar valores RGB de 0 a 255
+        slider = GetComponent<Slider>();
+
         orange = new Color32(255, 128, 13, 255);
-        camera = Camera.main;
     }
 
     private void Update()
     {
-        transform.rotation = camera.transform.rotation;
+        transform.rotation = Camera.main.transform.rotation;
         transform.position = target.position + offset;
     }
 

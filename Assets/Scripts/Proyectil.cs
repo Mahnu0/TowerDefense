@@ -42,7 +42,7 @@ public partial class Proyectil : MonoBehaviour
             other.GetComponent<IGolpeable>()?.RecibeDanyo(danyoImpactoDirecto);
             RealizaLaDestruccion();
         }
-        else
+        else if (!other.CompareTag("Cimiento"))
             RealizaLaDestruccion();
     }
 

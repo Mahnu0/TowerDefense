@@ -112,7 +112,7 @@ MonoBehaviour:
   velocidad: 4
   vida: 2
   vidaMaxima: 2
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4364453208860545273}
   umbralLlegada: 1
 --- !u!114 &3234600027883807150
 MonoBehaviour:
@@ -126,14 +126,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77424383874c7b4c9cdf79513b8fc70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioDeteccion: 50
-  radioPerdidaDeObjetivo: 50
+  radioDeteccion: 5
+  radioPerdidaDeObjetivo: 0
   tagsObjetivos:
   - Torre
   prefabProyectil: {fileID: 8264457988267252046, guid: 63ddce83d732e0f4abcc4188ccae107d, type: 3}
   tiempoEntreProyectiles: 1
   origenProyectil: {fileID: 7986282305245275458}
-  alturaSaltoProyectil: 1
+  alturaSaltoProyectil: 0
 --- !u!1 &4923166729937094505
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 16560923940687714}
   - component: {fileID: 4967880587085735338}
-  - component: {fileID: 8830324900756428728}
+  - component: {fileID: 4364453208860545273}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8830324900756428728
+--- !u!114 &4364453208860545273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,10 +236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d855634699ef92489b7fd66e6b12f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 4967880587085735338}
   sliderFill: {fileID: 1009500131061424631}
+  slider: {fileID: 4967880587085735338}
   target: {fileID: 6970739534854048884}
-  offset: {x: 0, y: 2.3, z: 0}
+  offset: {x: 0, y: 2, z: 0}
 --- !u!1 &5361221872749888159
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +265,7 @@ Transform:
   m_GameObject: {fileID: 5361221872749888159}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.57, z: 0.62}
+  m_LocalPosition: {x: 0, y: 1.64, z: 0.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

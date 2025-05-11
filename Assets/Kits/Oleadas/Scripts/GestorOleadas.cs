@@ -36,6 +36,8 @@ public class GestorOleadas : MonoBehaviour
             StartCoroutine(LanzaOleadas(guion.lineas[i].oleada));
             yield return new WaitForSeconds(guion.lineas[i].espera);
         }
+
+        GameManager.Instance.NotificaUltimoEnemigoCreado();
     }
 
     IEnumerator LanzaOleadas(DefinicionOleada oleada)
@@ -51,8 +53,7 @@ public class GestorOleadas : MonoBehaviour
                 Vector3.zero,
                 Quaternion.identity);
 
-                //enemigo.EstablecerRuta(rutas[Random.Range(0, rutas.Length)]);
-                enemigo.EstablecerRuta(rutas[0]);
+                enemigo.EstablecerRuta(rutas[Random.Range(0, rutas.Length)]);
 
                 yield return new WaitForSeconds(oleada.bloques[i].tiempoEntreEnemigos);
             }

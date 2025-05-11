@@ -6,8 +6,7 @@ public class Enemigo : MonoBehaviour, IGolpeable
     public SplineContainer ruta;
     [SerializeField] private float velocidad = 4f;
     [SerializeField] private float vida, vidaMaxima = 2f;
-    public HealthBar healthBar;
-
+    [SerializeField] private HealthBar healthBar;
     [SerializeField] private float umbralLlegada = 1f;
 
     float distanciaEntrePuntos = 5f;
@@ -38,8 +37,9 @@ public class Enemigo : MonoBehaviour, IGolpeable
 
         vida = vidaMaxima;
 
-        healthBar = GetComponentInChildren<HealthBar>();
         healthBar.UpdateHealthBar(vida, vidaMaxima);
+
+        GameManager.Instance.NotificaEnemigoCreado();
     }
 
     private void Update()
@@ -53,7 +53,10 @@ public class Enemigo : MonoBehaviour, IGolpeable
             indiceSiguientePosicion++;
 
             if (indiceSiguientePosicion == pathPointsCache.Length)
+            {
                 Destroy(gameObject);
+                GameManager.Instance.NotificaEnemigoLlegaAlFinal();
+            }
             else
                 posicionSiguiente = pathPointsCache[indiceSiguientePosicion];
         }
@@ -68,4 +71,6 @@ public class Enemigo : MonoBehaviour, IGolpeable
         else
             Destroy(this.gameObject);
     }
+
+    private void OnDestroy() { GameManager.Instance.NotificaEnemigoDestruido(); }
 }

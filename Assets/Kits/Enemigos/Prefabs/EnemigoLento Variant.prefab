@@ -25,6 +25,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
+      propertyPath: prefabProyectil
+      value: 
+      objectReference: {fileID: 4576593386975054596, guid: 52af47f74c3334e49a31204e83e21342, type: 3}
+    - target: {fileID: 3234600027883807150, guid: 6e2c507691b7b234a8310233c572bff3, type: 3}
       propertyPath: alturaSaltoProyectil
       value: 1.5
       objectReference: {fileID: 0}

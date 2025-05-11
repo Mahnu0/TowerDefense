@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3449039861844660999}
   - component: {fileID: 6589103684468872930}
   - component: {fileID: 3494482894154692942}
-  - component: {fileID: 3021980220039062053}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -87,27 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3021980220039062053
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223246194898705762}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2576114509476671450
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,6 +128,7 @@ GameObject:
   - component: {fileID: 1926885269297463550}
   - component: {fileID: 4708139516802423551}
   - component: {fileID: 7847830569755679297}
+  - component: {fileID: 7655907460948732070}
   m_Layer: 0
   m_Name: TorreBase
   m_TagString: Torre
@@ -195,7 +174,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3090186522666330430}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d77424383874c7b4c9cdf79513b8fc70, type: 3}
   m_Name: 
@@ -208,6 +187,27 @@ MonoBehaviour:
   tiempoEntreProyectiles: 2
   origenProyectil: {fileID: 8834241414675686850}
   alturaSaltoProyectil: 2
+--- !u!65 &7655907460948732070
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090186522666330430}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &3595220298093942067
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,8 +385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d855634699ef92489b7fd66e6b12f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1988328840059982636}
   sliderFill: {fileID: 2684208749542980175}
+  slider: {fileID: 1988328840059982636}
   target: {fileID: 1926885269297463550}
   offset: {x: 0, y: 2.3, z: 0}
 --- !u!1 &4556254966077478850
